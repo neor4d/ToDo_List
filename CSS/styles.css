@@ -1,0 +1,186 @@
+:root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    /* --primary: 240 5.9% 10%; */
+    --primary: #2196F3;
+    --secondary2: #8021f3;
+    --tertiary: #f3ad21;
+    --primary-foreground: #fff;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.page-active {
+    background-color: var(--primary);
+    color: #fff !important;
+}
+
+.task-card {
+    background: hsl(var(--muted));
+    border-radius: 10px;
+}
+
+.task-op {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: .2s ease-in;
+}
+
+.task-op:hover {
+    border-color: var(--primary);
+}
+
+.arrow-ico {
+    transition: .2s ease-in;
+}
+
+.task-op:hover > .arrow-ico {
+    color: var(--primary);
+}
+
+.icon-container {
+    background-color: var(--primary);
+    color: #fff;
+    width: 35px;
+    height: 35px;
+}
+
+.bg-muted {
+    background-color: hsl(var(--muted));
+}
+
+.text-blueBG-foreground {
+    color: var(--primary);
+}
+
+.text-foreground {
+    color: hsl(var(--foreground));
+}
+
+.text-primary-foreground {
+    color: var(--primary-foreground);
+}
+
+.text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-secondary2 {
+    background-color: var(--secondary2);
+}
+
+.bg-tertiary {
+    background-color: var(--tertiary);
+}
+
+.bg-card {
+    background-color: hsl(var(--card));
+}
+
+/* CHECKBOX STYLES */
+
+.checkbox-container input, 
+.checkbox-container-secondary input, 
+.checkbox-container-tertiary input {
+    display: none;
+}
+  
+.checkbox-container,
+.checkbox-container-secondary,
+.checkbox-container-tertiary {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+/* Create a custom checkbox */
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: #2196F300;
+    border-radius: 0.25em;
+    transition: all 0.25s;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary);
+}
+
+.checkbox-container-secondary input:checked ~ .checkmark {
+    background-color: var(--secondary2);
+}
+
+.checkbox-container-tertiary input:checked ~ .checkmark {
+    background-color: var(--tertiary);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    transform: rotate(0deg);
+    border: 0.1em solid black;
+    left: 0;
+    top: 0;
+    width: 1.05em;
+    height: 1.05em;
+    border-radius: 0.25em;
+    transition: all 0.25s, border-width 0.1s;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after, 
+.checkbox-container-secondary input:checked ~ .checkmark:after, 
+.checkbox-container-tertiary input:checked ~ .checkmark:after {
+    left: 0.48em;
+    top: 0.3em;
+    width: 0.35em;
+    height: 0.55em;
+    border-color: #fff0 white white #fff0;
+    border-width: 0 0.15em 0.15em 0;
+    border-radius: 0em;
+    transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 880px){
+    .day-card {
+        overflow-x: scroll;
+        max-width: 100%;
+    }
+}

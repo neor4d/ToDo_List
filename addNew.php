@@ -94,8 +94,8 @@
 
                 <div class="task-op bg-muted p-4 my-2 mx-1 rounded-lg flex items-center justify-between">
 
-                    <div class="flex items-center space-x-2">
-                        <!-- <img aria-hidden="true" alt="idea-icon" src="https://openui.fly.dev/openui/24x24.svg?text=💡" /> -->
+                    <label for="idea" class="flex items-center space-x-2">
+                        <input type="radio" name="activity" id="idea" hidden>
                         
                         <div class="icon-container flex items-center justify-center p-1.5 rounded-lg">
                             <i class="fa-regular fa-lightbulb text-xl"></i>
@@ -106,7 +106,7 @@
                             <br>
                             <span class="text-muted-foreground text-sm">3 in this week</span>
                         </div>
-                    </div>
+                    </label>
                     
 
                 </div>

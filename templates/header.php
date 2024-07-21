@@ -15,10 +15,11 @@ $currentFile = basename($_SERVER['PHP_SELF']);
 
         <link rel="shortcut icon" href="./media/logos/ListLuxe-Logo2.png" type="image/x-icon">
 
-        <link rel="stylesheet" href="./CSS/styles.css">
         <link rel="stylesheet" href="./src/sweetalert/sweetalert2.min.css">
 
         <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="./CSS/styles.css">
 
         <script src="https://kit.fontawesome.com/43a60623da.js" crossorigin="anonymous"></script>
         

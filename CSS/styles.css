@@ -6,7 +6,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
     /* --primary: 240 5.9% 10%; */
-    --primary: #2196F3;
+    --primary: #2196F3 !important;
     --secondary2: #8021f3;
     --tertiary: #f3ad21;
     --primary-foreground: #fff;
@@ -35,6 +35,15 @@ body {
     min-height: 100vh;
 }
 
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
 .page-active {
     background-color: var(--primary);
     color: #fff !important;
@@ -51,7 +60,8 @@ body {
     transition: .2s ease-in;
 }
 
-.task-op:hover {
+.task-op:hover,
+.task-op-active {
     border-color: var(--primary);
 }
 
